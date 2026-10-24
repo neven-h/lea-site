@@ -1,5 +1,4 @@
 // Keys ending in "Html" are set with innerHTML (they carry <br>/<em>); all others as text.
-// FR falls back to EN until French copy exists.
 const I18N = {
     de: {
       navHome: "Start", navAreas: "Tätigkeitsbereiche", navAbout: "Über mich", navContact: "Kontakt",
@@ -44,9 +43,30 @@ const I18N = {
       c3: "LL.M., [UNIVERSITY], Paris", c4: "Legal traineeship (Referendariat), [PLACES]", c5: "Law studies, [UNIVERSITY]",
       contactTitleHtml: "Let’s talk about <em>your case.</em>",
       fImprint: "Imprint", fPrivacy: "Privacy Policy", fCookies: "Cookie Policy", fCookieSettings: "Cookie settings"
+    },
+    fr: {
+      navHome: "Accueil", navAreas: "Domaines d’activité", navAbout: "À propos", navContact: "Contact",
+      heroTitleHtml: "Le droit allemand,<br>expliqué clairement.<br><em>Dans votre langue.</em>",
+      heroLede: "Droit des contrats et droit du travail pour une clientèle internationale et francophone. Avocate en Allemagne (Rechtsanwältin), LL.M. (Paris) — Berlin.",
+      cta: "Prendre rendez-vous", email: "Écrire un e-mail",
+      areasTitle: "Domaines d’activité",
+      areasSub: "Pour les particuliers, les fondateurs et les entreprises actives en Allemagne.",
+      area1Title: "Droit des contrats",
+      area1Desc: "Je rédige et vérifie vos contrats avant leur signature, et je fais valoir ou conteste des prétentions lorsqu’un accord n’est pas respecté.",
+      area2Title: "Droit du travail",
+      area2Desc: "Licenciement, avertissement, indemnités de départ, contrats de travail et ruptures conventionnelles — pour salariés et employeurs.",
+      area3Title: "Litiges & créances",
+      area3Desc: "Vous avez reçu une mise en demeure ou une réclamation ? J’examine si elle est fondée et je vous représente à l’amiable comme devant les tribunaux.",
+      quote: "« Vous échangez directement avec moi — et je vous dis franchement quand un litige n’en vaut pas la peine. »",
+      about1: "Avocate allemande titulaire d’un LL.M. obtenu à Paris, je conseille une clientèle internationale et francophone en droit allemand des contrats et du travail.",
+      about2: "De la première analyse jusqu’à la procédure amiable ou judiciaire, vous avez une seule interlocutrice et une base claire pour chaque décision.",
+      careerTitle: "Parcours",
+      c1Date: "Depuis [ANNÉE]", c1: "Avocate, [CABINET], Berlin", c2: "Admission au barreau",
+      c3: "LL.M., [UNIVERSITÉ], Paris", c4: "Stage juridique (Referendariat), [LIEUX]", c5: "Études de droit, [UNIVERSITÉ]",
+      contactTitleHtml: "Parlons de <em>votre dossier.</em>",
+      fImprint: "Mentions légales", fPrivacy: "Politique de confidentialité", fCookies: "Politique relative aux cookies", fCookieSettings: "Paramètres des cookies"
     }
   };
-  I18N.fr = I18N.en;
 
   function setLang(lang) {
     document.documentElement.lang = lang;
