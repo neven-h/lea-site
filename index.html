@@ -8,68 +8,117 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="utility-bar">
-  <div class="lang-dd">
-    <button class="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false" id="langBtn">DE <span aria-hidden="true">▾</span></button>
-    <ul class="lang-dd-menu" role="listbox" aria-labelledby="langBtn" hidden>
-      <li><button role="option" data-lang="de" aria-selected="true">Deutsch</button></li>
-      <li><button role="option" data-lang="en" aria-selected="false">English</button></li>
-      <li><button role="option" data-lang="fr" aria-selected="false">Français</button></li>
-    </ul>
-  </div>
-</div>
-
 <header>
-  <div class="header-inner">
-    <a class="logo" href="/">L<em>K</em>.</a>
-    <div class="header-right">
-      <a class="nav-cta" href="#imprint" data-i18n="nav">Kontakt</a>
+  <div class="header-inner wrap">
+    <a class="logo" href="#home">Lea Kersting</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-i18n="navHome">Start</a>
+      <a href="#areas" data-i18n="navAreas">Tätigkeitsbereiche</a>
+      <a href="#about" data-i18n="navAbout">Über mich</a>
+      <a href="#contact" data-i18n="navContact">Kontakt</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="de" aria-pressed="true">DE</button><span aria-hidden="true">·</span>
+      <button data-lang="en" aria-pressed="false">EN</button><span aria-hidden="true">·</span>
+      <button data-lang="fr" aria-pressed="false">FR</button>
     </div>
   </div>
 </header>
 
 <main>
 
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="hero-card fade">
-        <h1>Lea <em>Kersting</em></h1>
-        <p class="role" data-i18n="role">Rechtsanwältin, LL.M. (Paris)</p>
-        <p class="areas" data-i18n="areas">Deutsches Vertragsrecht und Arbeitsrecht — Beratung internationaler und französischsprachiger Mandantinnen und Mandanten</p>
-        <p class="locations">Berlin</p>
+  <section id="home" class="hero wrap">
+    <div class="hero-text fade">
+      <h1 data-i18n="heroTitleHtml">Deutsches Recht,<br>klar erklärt.<br><em>In Ihrer Sprache.</em></h1>
+      <p class="lede" data-i18n="heroLede">Vertragsrecht und Arbeitsrecht für internationale und französischsprachige Mandantinnen und Mandanten. Rechtsanwältin, LL.M. (Paris) — Berlin.</p>
+      <div class="actions">
         <!-- EDIT: real Calendly link -->
-        <a class="cta" href="https://calendly.com/your-link" target="_blank" rel="noopener" data-i18n="cta">Termin vereinbaren</a>
-      </div>
-      <div class="portrait-col fade">
-        <img class="portrait" src="photo.jpg" alt="Portrait of Lea Kersting">
+        <a class="btn" href="https://calendly.com/your-link" target="_blank" rel="noopener" data-i18n="cta">Termin vereinbaren</a>
+        <a class="link" href="#areas" data-i18n="navAreas">Tätigkeitsbereiche</a>
       </div>
     </div>
-  </div>
+    <div class="portrait-frame fade">
+      <img class="portrait" src="photo.jpg" alt="Portrait of Lea Kersting">
+    </div>
+  </section>
 
-  <section id="imprint" class="imprint-section wrap">
-    <h2 data-i18n="imprintTitle">Impressum / <em>Kontakt</em></h2>
-    <p>Rechtsanwältin Lea Kersting</p>
-    <p>c/o Thomas Rechtsanwälte — The Startup Lawyers<br>Oranienburger Str. 23<br>10178 Berlin (D)</p>
-    <div class="accent-bar" aria-hidden="true"></div>
-    <a class="li-icon" href="https://www.linkedin.com/in/lea-k-5029a7327/" rel="me" aria-label="LinkedIn">in</a>
-    <!-- NOTE: this email is Raphael Thomas's — swap if Lea has her own address -->
-    <p><a href="mailto:raphael@startup-lawyers.com">raphael@startup-lawyers.com</a></p>
-    <p style="margin-top:10px">Tel: <a href="tel:+4930220661670">+49 30 220 6616 70</a></p>
-    <p style="margin-top:6px">Fax: +49 30 220 6616 77</p>
+  <section id="areas" class="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="areasTitle">Tätigkeitsbereiche</h2>
+        <p data-i18n="areasSub">Für Privatpersonen, Gründerinnen und Gründer sowie Unternehmen in Deutschland.</p>
+      </div>
+      <div class="area-list">
+        <a class="area-row" href="#contact">
+          <span class="num">01</span>
+          <span class="area-name" data-i18n="area1Title">Vertragsrecht</span>
+          <span class="area-desc" data-i18n="area1Desc">Ich entwerfe und prüfe Verträge vor der Unterschrift und setze Ansprüche durch oder wehre sie ab, wenn eine Vereinbarung nicht eingehalten wird.</span>
+        </a>
+        <a class="area-row" href="#contact">
+          <span class="num">02</span>
+          <span class="area-name" data-i18n="area2Title">Arbeitsrecht</span>
+          <span class="area-desc" data-i18n="area2Desc">Kündigung, Abmahnung, Abfindung, Arbeitsverträge und Aufhebungsverträge — für Arbeitnehmer und Arbeitgeber.</span>
+        </a>
+        <a class="area-row" href="#contact">
+          <span class="num">03</span>
+          <span class="area-name" data-i18n="area3Title">Streitigkeiten &amp; Forderungen</span>
+          <span class="area-desc" data-i18n="area3Desc">Eine Zahlungsaufforderung oder ein Anspruch gegen Sie? Ich prüfe, ob er Bestand hat, und vertrete Sie außergerichtlich und vor Gericht.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about wrap">
+    <blockquote data-i18n="quote">„Sie sprechen direkt mit mir — und ich sage Ihnen ehrlich, wenn sich ein Streit nicht lohnt.“</blockquote>
+    <div class="about-text">
+      <p class="label" data-i18n="navAbout">Über mich</p>
+      <p data-i18n="about1">Ich bin Rechtsanwältin mit einem LL.M. aus Paris und berate internationale und französischsprachige Mandantinnen und Mandanten im deutschen Vertrags- und Arbeitsrecht.</p>
+      <p class="muted" data-i18n="about2">Von der ersten Einschätzung bis zum außergerichtlichen oder gerichtlichen Verfahren haben Sie eine Ansprechpartnerin und eine klare Grundlage für jede Entscheidung.</p>
+      <h3 class="label" data-i18n="careerTitle">Werdegang</h3>
+      <!-- EDIT: fill in the real dates and places -->
+      <dl class="career">
+        <div><dt data-i18n="c1Date">Seit [JAHR]</dt><dd data-i18n="c1">Rechtsanwältin, [KANZLEI], Berlin</dd></div>
+        <div><dt>[JAHR]</dt><dd data-i18n="c2">Zulassung zur Rechtsanwaltschaft</dd></div>
+        <div><dt>[JAHR]</dt><dd data-i18n="c3">LL.M., [UNIVERSITÄT], Paris</dd></div>
+        <div><dt>[JAHRE]</dt><dd data-i18n="c4">Referendariat, [ORTE]</dd></div>
+        <div><dt>[JAHRE]</dt><dd data-i18n="c5">Studium der Rechtswissenschaft, [UNIVERSITÄT]</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" class="contact wrap">
+    <div class="contact-head">
+      <h2 data-i18n="contactTitleHtml">Sprechen wir über <em>Ihren Fall.</em></h2>
+      <div class="actions">
+        <a class="btn" href="https://calendly.com/your-link" target="_blank" rel="noopener" data-i18n="cta">Termin vereinbaren</a>
+        <!-- NOTE: this email is Raphael Thomas's — swap if Lea has her own address -->
+        <a class="btn ghost" href="mailto:raphael@startup-lawyers.com" data-i18n="email">E-Mail schreiben</a>
+      </div>
+    </div>
+    <address id="imprint" class="imprint">
+      <p><strong>Rechtsanwältin Lea Kersting</strong></p>
+      <p>c/o Thomas Rechtsanwälte — The Startup Lawyers<br>Oranienburger Str. 23<br>10178 Berlin</p>
+      <p>Tel: <a href="tel:+4930220661670">+49 30 220 6616 70</a><br>Fax: +49 30 220 6616 77<br><a href="mailto:raphael@startup-lawyers.com">raphael@startup-lawyers.com</a></p>
+      <p><a href="https://www.linkedin.com/in/lea-k-5029a7327/" rel="me">LinkedIn</a></p>
+    </address>
   </section>
 
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Lea Kersting</span>
-    <!-- EDIT: link real Impressum / Datenschutz pages -->
-    <span><a href="#imprint">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+    <span>© 2026 Rechtsanwältin Lea Kersting</span>
+    <!-- EDIT: link real Datenschutz / Cookie pages -->
+    <nav aria-label="Legal">
+      <a href="#imprint" data-i18n="fImprint">Impressum</a>
+      <a href="datenschutz.html" data-i18n="fPrivacy">Datenschutz</a>
+      <a href="cookies.html" data-i18n="fCookies">Cookie-Richtlinie</a>
+      <a href="#cookie-settings" data-i18n="fCookieSettings">Cookie-Einstellungen</a>
+    </nav>
   </div>
 </footer>
 
